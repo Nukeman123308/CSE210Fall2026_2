@@ -1,0 +1,24 @@
+using System;
+
+
+public class Journal_Entry
+{
+    public string _date; 
+    public string _promtText;
+    public string _entryText; 
+
+    public void Display()
+    {
+        
+    }
+
+
+
+
+
+
+
+
+
+
+}
