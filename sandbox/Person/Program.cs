@@ -1,18 +1,29 @@
-﻿class Program
+﻿
+using System;
+using System.Collections.Generic;
+
+class Program
 {
-    static void Main() 
+    static void Main()
     {
-        Person myPerson = new Person("Bob", "Floyd", 56, 238); 
+        Person myPerson = new Person("Bob", "Floyd", 56, 238);
+        Console.WriteLine(myPerson.GetPersonInformation());
 
-        myPerson.DisplayPersonInformation(); 
+        Police myPolice = new Police("Lance", "Bob", 34, 186, "taser");
+        Console.WriteLine(myPolice.GetPoliceInformation());
 
-        Police myPolice = new Police("Lance", "Bob", 34, 186, "taseer"); 
+        Doctor myDoctor = new Doctor("Billy", "Paybne", 20, 150, "Knife");
+        Console.WriteLine(myDoctor.GetPersonInformation());
+        Console.WriteLine(myDoctor.GetDoctorInformation());
 
-        myPolice.DisplayPersonInformation();  
+        List<Person> myPeople = new List<Person>();
+        myPeople.Add(myPerson);
+        myPeople.Add(myDoctor);
+        myPeople.Add(myPolice);
+
+        foreach (Person person in myPeople)
+        {
+            Console.WriteLine(person.GetPersonInformation());
+        }
     }
 }
-
-
-
-
-

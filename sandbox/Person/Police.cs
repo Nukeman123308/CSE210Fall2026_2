@@ -1,4 +1,6 @@
 
+using System.Reflection.Metadata.Ecma335;
+
 class Police : Person
 {
     private string _weapons;
@@ -7,5 +9,10 @@ class Police : Person
         : base(firstName, lastName, age, weight)
     {
         _weapons = weapons;
+    }
+
+    public string GetPoliceInformation()
+    {
+        return $"Police: Weapons: {_weapons}, {GetPersonInformation()}"; 
     }
 }
