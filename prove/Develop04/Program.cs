@@ -14,7 +14,7 @@ public class Program
         int listingCount = 0;
 
         bool running = true;
-1
+
         while (running)
         {
             Console.Clear();
